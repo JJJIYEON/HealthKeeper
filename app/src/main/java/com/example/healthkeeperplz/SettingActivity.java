@@ -3,9 +3,9 @@ package com.example.healthkeeperplz;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
+import android.app.PendingIntent;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
@@ -14,13 +14,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 
-
-import android.view.MenuItem;
 import android.view.View;
+import android.view.MenuItem;
 import android.widget.Button;
 
 public class SettingActivity extends AppCompatActivity {
-
     //알림기능(Notification) - 지연
     public static final String NOTIFICATION_CHANNEL_ID = "10001";
     private int water_set = 0; // +-버튼 눌렀을때 물 양

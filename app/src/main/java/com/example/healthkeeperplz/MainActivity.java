@@ -2,17 +2,31 @@ package com.example.healthkeeperplz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.TimePicker;
+
+import java.util.Calendar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    //알림 시간설정-지연
+    private TimePicker timePicker;
+    private AlarmManager alarmManager;
+    private int hour, minute;
+
 
     EditText weight, height; //BMI - 혜린
     TextView resulttext;
@@ -35,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
